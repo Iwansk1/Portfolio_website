@@ -1,6 +1,7 @@
 :root{
     --object-color: #EF001D;
     --text-color: #fff;
+    --secondary-background-color: #2E2E2E; 
 
 }
 a{
@@ -94,6 +95,7 @@ span{
 .about_me_desc a:hover{
     color: var(--object-color);
 }
+
 .male{
     list-style: none;
 }
@@ -121,7 +123,7 @@ span{
     z-index: 1;
     transition: 0.4s ease-in-out;
 }
-.links_button_logo img{
+.links_button_logo img, .skills_image img{
     width: 75px;
     height: 75px;
     border-radius: 10px;
@@ -169,3 +171,78 @@ span{
     border-radius: 10px;
     object-fit: cover;
 }
+.breakspace{
+    width: 100%;
+    height: 5vh;
+    background-color: var(--secondary-background-color);
+}
+.info_section{
+    background-color: var(--secondary-background-color);
+    text-align: center;
+    overflow: hidden;
+    font-size: 3rem;
+}
+.info_section h1{
+    padding-bottom: 30px;
+}
+.info_introduction, .info_game, .info_dev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+.info_introduction img{
+    animation-duration: 1.5s;
+    animation-name: fadein;
+    position: relative;
+}
+.info_text{
+    animation-name: fadeintext;
+    animation-duration: 1.5s;
+    padding-top: 10px;
+    position: relative;
+}
+.head_text_info{
+    padding: 30px;
+    font-size: 1.9rem;
+}
+.info_img{
+    animation-duration: 1.5s;
+    animation-name: fadein;
+    position: relative;
+}
+.info_text{
+    text-align: left;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    overflow: hidden;
+    width: 600px;
+}
+.info_img{
+    width: 500px;
+    height: 325px;
+    border-radius: 10px;
+}
+
+@keyframes fadeintext{
+    from{
+        left: 100%;
+        opacity: 0;
+    }
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+@keyframes fadein{
+    from {
+        filter: grayscale(0%);
+        right: 100%;
+    }
+    to{
+        filter: grayscale(100%);
+        right: 0;
+    }
+}
+
