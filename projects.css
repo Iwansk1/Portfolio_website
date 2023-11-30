@@ -1,0 +1,86 @@
+:root{
+    --object-color: #EF001D;
+    --text-color: #fff;
+    --secondary-background-color: #2E2E2E; 
+
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: 0.4s ease-in-out;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+    background-image: url("Images/Carbon_BG.png");
+}
+ul{
+    display: flex;
+    gap: 1.3em;
+}
+
+h1{
+    color: #fff;
+}
+h2{
+    font-size: 2rem;
+    padding: 20px;
+}
+header h1{
+    text-align: center;
+    font-size: 4rem;
+}
+span{
+    font-size: 1.5rem;
+    cursor: none;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 0 40px;
+    background-color: #111;
+    height: 50px;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+.navbar a:hover{
+    color: var(--object-color);
+    scale: 105%;
+}
+.header_title{
+    padding-bottom: 100px;
+}
+.artstation_container{
+    display: flex;
+    justify-content: center;
+}
+.projects_box{
+    width: 500px;
+    height: auto;
+}
+.projects_img{
+    width: 500px;
+    height: auto;
+    position: absolute;
+    border-radius: 10px;
+}
+.projects_box:hover .projects_text{
+    display: inline;
+}
+.projects_text{
+    position: relative;
+    color: var(--text-color);
+    text-align: center;
+    width: 100%;
+    display: none;
+    top: 150px;
+}
+
