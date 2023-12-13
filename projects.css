@@ -24,9 +24,14 @@ ul{
     display: flex;
     gap: 1.3em;
 }
-
 h1{
     color: #fff;
+}
+button{
+    border: none;
+    font-size: 1.1rem;
+    padding: 16px 40px;
+    border-radius: 3px;
 }
 h2{
     font-size: 2rem;
@@ -56,31 +61,52 @@ span{
     scale: 105%;
 }
 .header_title{
-    padding-bottom: 100px;
+    margin-bottom: 75px;
 }
-.artstation_container{
+.filter_button_container{
+    margin-bottom: 50px;
+}
+.filter_buttons{
     display: flex;
     justify-content: center;
+    gap: 50px;
+}
+.filter_buttons button{
+    background-color: var(--object-color);
+    transition: 0.3s;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.filter_buttons button:hover{
+    background-color: white;
+    color: var(--object-color);
+}
+.projects_artstation{
+    overflow: hidden;
 }
 .projects_box{
-    width: 500px;
+    width: 100vw;
     height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+.projects_artstation img{
+    width: 450px;
+    height: 300px;
 }
 .projects_img{
-    width: 500px;
-    height: auto;
-    position: absolute;
     border-radius: 10px;
 }
-.projects_box:hover .projects_text{
-    display: inline;
+.maya{
+    display: flex;
 }
-.projects_text{
-    position: relative;
-    color: var(--text-color);
-    text-align: center;
-    width: 100%;
+.design, .code{
     display: none;
-    top: 150px;
 }
+
+
 

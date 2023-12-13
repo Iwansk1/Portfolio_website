@@ -1,14 +1,27 @@
-// gsap.registerEffect({
-//     name: "fadein",
-//     defaults: {duratiom: 2},
-//     effect: (targets, config) => {
-//         return gsap.to(targets, { duration: config.duration, opacity: 0});
-//     }
-// });
-// gsap.effects.fadein(".projects_text");
+function filterImages(category){
+    const imageContainers = document.querySelectorAll('.projects_box');
+    
+    imageContainers.forEach(container => {
+        if (container.classList.contains(category)){
+            container.style.display = 'flex'
+            enableImages(container)
+        } else{
+            container.style.display = 'none'
+            disableImages(container)
+        }
+    });
+}
 
-// document.querySelectorAll(".projects_text").forEach(function(fade) {
-//     fade.addEventListener("mouseenter", function() {
-//       gsap.effects.fadein(this);
-//     });
-//   });
+function enableImages(container){
+    const images = container.querySelectorAll('.projects_img')
+    images.forEach(image =>{
+        image.removeAttribute('disabled')
+    })
+}
+
+function disableImages(container){
+    const images = container.querySelectorAll('.projects_img')
+    images.forEach(image =>{
+        image.setAttribute('disabled', true)
+    })
+}

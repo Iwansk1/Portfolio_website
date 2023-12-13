@@ -22,16 +22,38 @@
         </nav>
         <h1 class="header_title">My Projects</h1>
     </Header>
+    <section class="filter_buttons_section">
+        <div class="filter_button_container">
+            <div class="filter_buttons">
+                <button onclick="filterImages('maya')">3D</button>
+                <button onclick="filterImages('design')">2D</button>
+                <button onclick="filterImages('code')">Code</button>
+            </div>
+        </div>
+    </section>
     <section class="projects_artstation">
         <div class="artstation_container">
-            <div class="projects_box">
+            <div class="projects_box maya">
+                <!-- *3D projecten images-->
                 <img class="projects_img" src="Images/3D/3D.jpg" alt="">
-                <div class="projects_text hidden">
-                    <h2>Barret 50 Cal</h2>
-                    <p>Model made with Maya 3d, textured with Substance Painter and rendered with Marmoset</p>
-                </div>
+                <img class="projects_img" src="Images/3D/3D.jpg" alt="">
+                <img class="projects_img" src="Images/3D/3D.jpg" alt="">
+                <img class="projects_img" src="Images/3D/3D.jpg" alt="">
             </div>
-
+                <!--*2D Projecten images-->
+            <div class="projects_box design">
+                <img class="projects_img" src="Images/2D/Tiger.png" alt="">
+                <img class="projects_img" src="Images/2D/Tiger.png" alt="">
+                <img class="projects_img" src="Images/2D/Tiger.png" alt="">
+                <img class="projects_img" src="Images/2D/Tiger.png" alt="">
+            </div>
+               <!--*Code stuff-->
+            <div class="projects_box code">
+                <img class="projects_img" src="Images/Code/News_site.png" alt="">
+                <img class="projects_img" src="Images/Code/News_site.png" alt="">
+                <img class="projects_img" src="Images/Code/News_site.png" alt="">
+                <img class="projects_img" src="Images/Code/News_site.png" alt="">
+            </div>
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
