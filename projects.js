@@ -4,9 +4,11 @@ function filterImages(category){
     imageContainers.forEach(container => {
         if (container.classList.contains(category)){
             container.style.display = 'flex'
+            container.style.opacity = '1'
             enableImages(container)
         } else{
             container.style.display = 'none'
+            container.style.opacity = '0'
             disableImages(container)
         }
     });

@@ -97,6 +97,7 @@ span{
 .projects_artstation img{
     width: 450px;
     height: 300px;
+    opacity: 1;
 }
 .projects_img{
     border-radius: 10px;
@@ -106,6 +107,7 @@ span{
 }
 .design, .code{
     display: none;
+    opacity: 0;
 }
 
 
