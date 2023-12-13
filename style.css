@@ -1,8 +1,8 @@
 :root{
     --object-color: #EF001D;
     --text-color: #fff;
-    --secondary-background-color: #2E2E2E; 
-
+    --background-color: #222; 
+    --secondary-background-color: #2E2E2E;
 }
 a{
     text-decoration: none;
@@ -39,6 +39,10 @@ header h1{
 span{
     font-size: 1.5rem;
     cursor: none;
+}
+footer{
+    background-color: var(--background-color);
+    
 }
 .navbar{
     display: flex;
@@ -184,6 +188,7 @@ span{
     text-align: center;
     overflow: hidden;
     font-size: 3rem;
+    padding-bottom: 30px;
 }
 .info_section h1{
     padding-bottom: 30px;
@@ -227,7 +232,42 @@ span{
     height: 325px;
     border-radius: 10px; 
 }
-
+.footer_container{
+    color: var(--text-color);
+}
+.footer_media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top: 30px;
+}
+.footer_links, .footer_icons{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+.footer_bottom{
+    font-size: 0.9rem;
+    text-align: end;
+    padding: 20px;
+}
+.contact_me{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact_input{
+    height: 30px;
+    padding: 20px;
+}
+.message{
+    height: 100px;
+}
+.footer_container a:hover{
+    color: var(--object-color);
+}
 
 /*
 @keyframes fadeintext{
