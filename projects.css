@@ -246,6 +246,11 @@ footer{
         gap: 10px;
     }
 }
+@media(max-width: 412px){
+    .projects_artstation img{
+        width: 325px;
+    }
+}
 
 
 
