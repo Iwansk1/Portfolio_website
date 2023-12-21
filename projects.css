@@ -45,6 +45,38 @@ span{
     font-size: 1.5rem;
     cursor: none;
 }
+.toggle_btn{
+    color: white;
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 0;
+    display: none;
+    transition: height 0.3s ease;
+}
+.dropdown_menu.open{
+    height: 190px;
+    z-index: 3;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown_menu a:hover{
+    color: var(--object-color);
+}
 .navbar{
     display: flex;
     justify-content: center;
@@ -97,6 +129,7 @@ span{
 .projects_artstation img{
     width: 450px;
     height: 300px;
+    opacity: 1;
 }
 .projects_img{
     border-radius: 10px;
@@ -106,6 +139,27 @@ span{
 }
 .design, .code{
     display: none;
+}
+@media(max-width: 720px){
+    .navbar a, span{
+        display: none;
+    }
+    .navbar, .toggle_btn, .dropdown_menu li{
+        display: flex;
+        justify-content: right;
+    }
+    .dropdown_menu.open{
+        display: flex;
+        align-items: center;
+        flex-direction: column;        
+    }
+    
+}
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: auto;
+    }
 }
 
 

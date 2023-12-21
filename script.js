@@ -1,3 +1,20 @@
+const toggleBtn = document.querySelector('.toggle_btn')
+const toggleBtnIcon = document.querySelector('.toggle_btn i')
+const dropDownMenu = document.querySelector('.dropdown_menu')
+
+toggleBtn.onclick = function(){
+  dropDownMenu.classList.toggle("open")
+  const isOpen = dropDownMenu.classList.contains("open")
+
+  toggleBtnIcon.classList = isOpen
+  ? "fa-solid fa-xmark"
+  : "fa-solid fa-bars"
+}
+
+
+let mm = gsap.matchMedia();
+
+
 gsap.registerPlugin(ScrollTrigger) 
 
 gsap.from(".header_title",{
@@ -21,6 +38,19 @@ gsap.from(".about_me_text",{
     duration: 1.5,
     opacity: 0
 })
+mm.add("(max-width: 950px", () =>{
+    gsap.from(".links_button_content img",{
+        scrollTrigger: "links",
+        opacity: 0,
+        duration: 1.5,
+    })
+    gsap.to(".links_button_logo img",{
+        scrollTrigger: "links",
+        opacity: 1,
+        duration: 1.5,
+    })
+})
+
 gsap.from(".projects_artstation",{
     scrollTrigger: ".projects_artstation",
     x: 350,
