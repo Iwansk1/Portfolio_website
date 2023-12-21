@@ -310,6 +310,14 @@ footer{
     .about_me_img img{
         filter: grayscale(0);
     }
+    .info_introduction, .info_dev{
+        gap: 20px;
+        flex-direction: column;
+    }
+    .info_game{
+        gap: 20px;
+        flex-direction: column-reverse;
+    }
 }
 @media(max-width: 860px){
     .links_button_container{
@@ -320,6 +328,7 @@ footer{
         height: auto;
         border-radius: 10px;
     }
+    
  
 }
 @media(max-width: 720px){
