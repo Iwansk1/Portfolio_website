@@ -17,6 +17,10 @@ a{
     box-sizing: border-box;
 }
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     background-color: #222;
     background-image: url("Images/Carbon_BG.png");
 }
@@ -48,6 +52,7 @@ span{
 }
 footer{
     background-color: var(--background-color);
+    margin-top: auto;
 }
 .toggle_btn{
     color: white;
@@ -119,6 +124,7 @@ footer{
 }
 .projects_artstation{
     overflow: hidden;
+    margin-bottom: 20px;
 }
 .projects_box{
     width: 100vw;
@@ -139,14 +145,12 @@ footer{
 .projects_img{
     border-radius: 10px;
 }
-.maya{
-    display: flex;
-}
 .design, .code{
     display: none;
 }
 .footer_container{
     color: var(--text-color);
+    margin-top: auto;
 }
 .footer_media{
     display: flex;
