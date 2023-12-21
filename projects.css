@@ -71,10 +71,10 @@ footer{
     overflow: hidden;
     height: 0;
     display: none;
-    transition: height 0.3s ease;
+    transition: 0.3s ease;
 }
 .dropdown_menu.open{
-    height: 190px;
+    height: 130px;
     z-index: 3;
 }
 .dropdown_menu li{
