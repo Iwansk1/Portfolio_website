@@ -316,7 +316,7 @@ footer{
      gap: 50px;
     }
     .projects_artstation img, .projects_design img{
-        width: 400px;
+        width: 350px;
         height: auto;
         border-radius: 10px;
     }
@@ -369,7 +369,7 @@ footer{
     }
     .info_text{
         padding: 0 40px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         width: auto;
     }
     .info_img{
