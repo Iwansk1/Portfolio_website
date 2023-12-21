@@ -1,8 +1,8 @@
 :root{
     --object-color: #EF001D;
     --text-color: #fff;
-    --secondary-background-color: #2E2E2E; 
-
+    --background-color: #222; 
+    --secondary-background-color: #2E2E2E;
 }
 a{
     text-decoration: none;
@@ -45,6 +45,9 @@ header h1{
 span{
     font-size: 1.5rem;
     cursor: none;
+}
+footer{
+    background-color: var(--background-color);
 }
 .toggle_btn{
     color: white;
