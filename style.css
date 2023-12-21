@@ -405,6 +405,10 @@ footer{
     .footer_media a, p{
         font-size: 0.8rem;
     }
+    .footer_bottom{
+        padding-top: 30px;
+        padding-right: 45px;
+    }
 
 
 }

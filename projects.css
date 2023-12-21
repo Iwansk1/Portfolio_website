@@ -40,6 +40,7 @@ h2{
 header h1{
     text-align: center;
     font-size: 4rem;
+    transition: 0.3s;
 }
 span{
     font-size: 1.5rem;
@@ -128,8 +129,9 @@ span{
 }
 .projects_artstation img{
     width: 450px;
-    height: 300px;
+    height: auto;
     opacity: 1;
+    transition: 0.3s;
 }
 .projects_img{
     border-radius: 10px;
@@ -139,6 +141,49 @@ span{
 }
 .design, .code{
     display: none;
+}
+.footer_container{
+    color: var(--text-color);
+}
+.footer_media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top: 30px;
+}
+.footer_links, .footer_icons{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+.footer_bottom{
+    font-size: 0.9rem;
+    text-align: end;
+    padding: 20px;
+}
+.contact_me{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact_input{
+    height: 30px;
+    padding: 20px;
+}
+.message{
+    height: 100px;
+}
+.footer_container a:hover{
+    color: var(--object-color);
+}
+@media(max-width: 926px){
+    .projects_artstation img{
+        width: 300px;
+        height: auto;
+        opacity: 1;
+    }
 }
 @media(max-width: 720px){
     .navbar a, span{
@@ -153,12 +198,49 @@ span{
         align-items: center;
         flex-direction: column;        
     }
+    .projects_artstation img{
+        width: 250px;
+        height: auto;
+        opacity: 1;
+    }
+    
     
 }
 @media(max-width: 576px){
     .dropdown_menu{
         left: 2rem;
         width: auto;
+    }
+    .footer_media h1{
+        font-size: 1.2rem;
+    }
+    .footer_media a, p{
+        font-size: 0.8rem;
+    }
+    .footer_bottom{
+        padding-top: 30px;
+        padding-right: 45px;
+    }
+    .header_title{
+        font-size: 2rem;
+    }
+    .filter_button_container{
+        margin-bottom: 50px;
+    }
+    .filter_buttons{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    .projects_artstation img{
+        width: 200px;
+        min-height: 125px;
+        height: auto;
+        opacity: 1;
+    }
+    .projects_box{
+        flex-direction: row;
+        gap: 10px;
     }
 }
 
