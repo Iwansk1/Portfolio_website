@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Iwan Bijl</title>
 </head>
@@ -28,7 +29,7 @@
         </nav>
         <h1 class="header_title">Iwan Bijl</h1>
     </Header>
-    <!--About me-->
+    <!--*ABOUT ME-->
     <section class="about-me">
         <div class="about_me_img">
             <img src="Images/PFP.png" alt="Profile picture">
@@ -46,7 +47,7 @@
                     <li>NL</li>
                 </ul>
                 <br>
-                <p>Beginner front-end developer<br> with a passion for cars</p>
+                <p>Front-end developer<br> with a passion for cars</p>
             </div>
         </div>
     </section>
@@ -82,9 +83,9 @@
         <div class="projects_container">
             <h2>3D work</h2>
             <div class="projects_artstation">
-                <img src="Images/3D/iwan-bijl-barrett.gif" alt="">
-                <img src="Images/3D/Bow.jpg" alt="">
-                <img src="Images/3D/screenshot019.png" alt="">
+                <img data-fancybox="gallery"  src="Images/3D/iwan-bijl-barrett.gif" alt="">
+                <img data-fancybox="gallery"  src="Images/3D/Bow.jpg" alt="">
+                <img data-fancybox="gallery"  src="Images/3D/screenshot019.png" alt="">
             </div>
             <h2>Graphic design</h2>
             <div class="projects_design">
@@ -148,6 +149,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
