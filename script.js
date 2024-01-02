@@ -1,3 +1,21 @@
+Fancybox.bind('[data-fancybox]', {
+    clickOutside: true, 
+    closeButton: false,
+    loop: true,
+    touch: {
+        vertical: true, // Allows vertical swiping
+    },
+    height: 500,
+        Toolbar: {
+          display: {
+            left: [],
+            middle: ['infobar'],
+            right: ['close'],
+          },
+        },
+  }); 
+
+
 const toggleBtn = document.querySelector('.toggle_btn')
 const toggleBtnIcon = document.querySelector('.toggle_btn i')
 const dropDownMenu = document.querySelector('.dropdown_menu')
@@ -10,6 +28,7 @@ toggleBtn.onclick = function(){
   ? "fa-solid fa-xmark"
   : "fa-solid fa-bars"
 }
+
 
 
 let mm = gsap.matchMedia();
