@@ -127,27 +127,23 @@ footer{
     margin-bottom: 20px;
 }
 .projects_box{
-    width: 100vw;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
-    position: relative;
+    margin: 30px;
+    transition: 0.3s;
 }
 .projects_artstation img{
-    width: 450px;
-    height: auto;
-    opacity: 1;
-    transition: 0.3s;
+    width: 400px;
+    height: 275px;
 }
 .projects_img{
     border-radius: 10px;
+    transition: 0.3s;
 }
-.design, .code{
-    display: none;
-}
+
 .footer_container{
     color: var(--text-color);
     margin-top: auto;
