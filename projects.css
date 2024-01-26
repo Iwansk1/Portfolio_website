@@ -35,7 +35,8 @@ button{
     border: none;
     font-size: 1.1rem;
     padding: 16px 40px;
-    border-radius: 3px;
+    color: white;
+    border-radius: 4px;
 }
 h2{
     font-size: 2rem;
@@ -113,37 +114,45 @@ footer{
     gap: 50px;
 }
 .filter_buttons button{
-    background-color: var(--object-color);
+    background-color: #ce2929;
     transition: 0.3s;
     color: var(--text-color);
     cursor: pointer;
 }
 .filter_buttons button:hover{
-    background-color: white;
-    color: var(--object-color);
+    background-color: #871C1C;
+    color: #FFF;
 }
-.projects_artstation{
+.filter_buttons button:focus{
+    box-shadow: 1px 1px 5px #1C1C1C;
+    background-color: #db1919;
+    color: #FFF;
+    scale: 105%;
+}
+button:active {
+    transform: translate(0em, 0.2em);
+   }
+.projects_section{
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
-.projects_box{
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    gap: 40px;
-    justify-content: center;
-    margin: 30px;
-    transition: 0.3s;
-}
-.projects_artstation img{
+
+.projects_section img{
     width: 400px;
     height: 275px;
 }
 .projects_img{
     border-radius: 10px;
-    transition: 0.3s;
 }
-
+.maya, .design, .code{
+    transition: opacity 0.35s ease-in-out;
+}
+.artstation_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
 .footer_container{
     color: var(--text-color);
     margin-top: auto;
@@ -210,6 +219,9 @@ footer{
     
 }
 @media(max-width: 576px){
+    button{
+        width: 150px;
+    }
     .dropdown_menu{
         left: 2rem;
         width: auto;
@@ -229,11 +241,13 @@ footer{
     }
     .filter_button_container{
         margin-bottom: 50px;
+        
     }
     .filter_buttons{
         display: flex;
         justify-content: center;
-        gap: 30px;
+        gap: 40px;
+        flex-wrap: wrap;
     }
     .projects_artstation img{
         width: 200px;
@@ -241,10 +255,7 @@ footer{
         height: auto;
         opacity: 1;
     }
-    .projects_box{
-        flex-direction: row;
-        gap: 10px;
-    }
+
 }
 @media(max-width: 412px){
     .projects_artstation img{
