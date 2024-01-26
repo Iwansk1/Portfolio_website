@@ -12,23 +12,94 @@ toggleBtn.onclick = function(){
 }
 
 
-function showAllImages(contaniner){
-    const images = document.querySelectorAll('.projects_box')
-    images.forEach(image =>{
-        image.style.display = 'flex'
-        image.style.opacity = '1'
-    })
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 }
+
+
+//! Category selection and image shuffle
+//* Function to shuffle images within a container
+function shuffleImagesInPlace(container) {
+    const images = Array.from(container.children);
+    shuffleArray(images);
+
+    container.innerHTML = ''; // Clear the container
+
+    images.forEach(image => {
+        container.appendChild(image);
+    });
+}
+
+//* Reveal all images and shuffle
+function showAllImages() {
+    const container = document.querySelector('#artstation_container');
+    const images = document.querySelectorAll('.maya, .design, .code');
+    
+    images.forEach(image => {
+        image.style.display = 'flex';
+        image.style.opacity = '0';
+        setTimeout(() => {
+            image.style.opacity = '1';
+        }, 300);
+    });
+
+    shuffleImagesInPlace(container);
+}
+
+
+//* Shows images according to category selected
+function filterImages(category, container) {
+    const images = document.querySelectorAll('.maya, .design, .code');
+
+    images.forEach(image => {
+        if (category === 'all' || image.classList.contains(category)) {
+            setTimeout(() => {
+                image.style.opacity = '1';
+            }, 300);
+            image.style.display = 'flex';
+        } else {
+            image.style.opacity = '0';
+            setTimeout(() => {
+                image.style.display = 'none';
+            }, 300);
+        }
+    });
+}
+
+// Randomize images within a container
+function randomizeImages(container) {
+    shuffleImagesInPlace(container);
+}
+
+const container = document.querySelector('#artstation_container');
+
+
+randomizeImages(container);
+//!
+
+
+
+//? Old functions for filtering
+/*
 function filterImages(category){
     const imageContainers = document.querySelectorAll('.projects_box');
     
     imageContainers.forEach(container => {
         if (container.classList.contains(category)){
-            container.style.display = 'flex'
-            enableImages(container)
+            setTimeout(() => {
+                container.style.display = 'flex'
+                enableImages(container)
+            }, 150);
+           
         } else{
-            container.style.display = 'none'
-            disableImages(container)
+            setTimeout(() => {
+                container.style.display = 'none'
+                disableImages(container)
+            }, 150);
+           
         }
     });
 }
@@ -37,10 +108,9 @@ function enableImages(container){
     const images = container.querySelectorAll('.projects_img')
     images.forEach(image =>{
         image.removeAttribute('disabled')
-        container.style.opacity = '1'
         setTimeout(() => {
             container.style.opacity = '1';
-        }, 50);
+        }, 150);
     })
 }
 
@@ -48,9 +118,10 @@ function disableImages(container){
     const images = container.querySelectorAll('.projects_img')
     images.forEach(image =>{
         image.setAttribute('disabled', true)
-        container.style.opacity = '0'
         setTimeout(() => {
             container.style.opacity = '0';
         }, 150);
     })
 }
+*/
+//?
