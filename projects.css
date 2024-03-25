@@ -164,7 +164,7 @@ button:active {
     text-align: center;
     padding-top: 30px;
 }
-.footer_links, .footer_icons{
+.footer_links, .footer_icons, .contact_me{
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -175,11 +175,7 @@ button:active {
     text-align: end;
     padding: 20px;
 }
-.contact_me{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+
 .contact_input{
     height: 30px;
     padding: 20px;
